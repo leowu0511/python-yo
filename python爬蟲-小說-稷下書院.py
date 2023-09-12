@@ -4,6 +4,7 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import time
 
 #最基礎的url,後面換網頁(章節),變化都靠它了
 #如果要用的話記得自己依樣畫葫蘆改一下就行了
@@ -55,6 +56,9 @@ for page in range(start_page, end_page + 1):
 
             # 開始時先換行
             novel_text += "\n" + content_text + "\n"
+
+            #強烈建議,我試完後(沒加sleep)發現被鎖ip了笑死
+            time.sleep(5)
 
 # 把內容存到文件（在 E:\ 電腦下載位置）
 file_path = r'E:\電腦下載位置\我天命大反派.txt'  #文件目錄 #名字.txt
