@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import re
 
 #最基礎的url,後面換網頁(章節),變化都靠它了
+#如果要用的話記得自己依樣畫葫蘆改一下就行了
 base_url = 'https://www.novel543.com/0321218234/8090_{}.html'
 
 #要爬的章節,start為開始章節,end為結束章節
@@ -60,4 +61,5 @@ file_path = r'E:\電腦下載位置\我天命大反派.txt'  #文件目錄 #名�
 with open(file_path, 'w', encoding='utf-8') as file:
     file.write(novel_text)
 
+#成功時返回
 print(f"小說已保存到 {file_path}")
